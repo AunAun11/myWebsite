@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อัญอัญเอง</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Charm&family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap');
+        body {
+            color: rgb(3, 3, 3);
+            text-align: center;
+            font-family: 'Chakra Petch', sans-serif;
+            
+        }
+        a {
+            border: none;
+            text-decoration: none;
+            color: rgb(248, 247, 247);
+            
+            
+        }
+        ul {
+            display: flex;
+            
+        }
+        li { 
+            list-style:none ;
+            display:inline-flex;
+            margin-right: 15px;
+        }
+        header {
+            color: rgb(245, 244, 244);
+            background-color: rgb(31, 30, 30);
+            height: 50px;
+            align-items: center;
+            
+        }
+        section {
+            align-items: center;
+            height: 500px;
+            
+        }
+        section video { width: 100%; }
+        svg { 
+        width: 100%;
+        position:absolute;
+
+        left: 0; 
+        height: 100%;
+        }
+        svg text {
+        font-size: 18px;
+        text-transform: uppercase;
+        }
+        svg rect {
+        fill: rgb(255, 255, 255);
+        }
+        svg > rect {
+            -webkit-mask: url(#mask);
+            mask: url(#mask);
+        }
+        #bottommm {
+
+            font-size: 5px;
+        }
+        #profile {
+            text-align: left;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            height: 570px;
+            padding: 70px 0;
+            mix-blend-mode: exclusion;
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+        #socool {
+            padding-left: 5px;
+        }
+        @keyframes move {
+                0.0%{
+                }
+                24.1%{
+                    transform: translate(0px,-30px);
+                }
+                49.6%{
+                    transform: translate(80px ,-20px);
+                }
+                78.4%{
+                    transform: translate(5px,-50px);
+                }
+                95.4%{
+                    transform: translate(40px,1px);
+                }
+            } 
+        #targetElement{
+            animation-name: move;
+            animation-duration: 15s;
+        }
+               
+        #ab {
+            align-items: center;
+            height: auto;
+            width: auto;
+            padding: 9%;
+        }
+        #myskill {
+            height:600px ;
+            background-color: #9f2a1c;
+            padding-top: 50px;
+            color: aliceblue;
+        }
+        #skill {
+            display:inline-flex;
+        }
+        div {
+                padding: 50px;
+            }
+        #forya {
+            padding:50px;
+            height:650px;
+            background-color: #c6665962 ;
+            align-items: center;
+        }
+        #emo {
+            padding:3%;
+        }
+        .emotion {
+            height: 150px ;
+        }
+        .answer {
+            padding:10% ;
+            display: none;
+        }
+        .imgAnswer {
+            height:200px ;
+        }
+        #noti {
+            display: inline;
+        }
+        footer {
+            padding:5%;
+            height: 300px;
+            background-color: rgba(103, 101, 101, 0.587);
+        }
+        @media only screen and (max-width: 990px) {
+            img {
+                height:250px;
+            }
+        }
+        
+        @media only screen and (max-width: 965px) {
+            .emotion{
+                height: 120px;
+            }
+        }
+        @media only screen and (max-width: 900px) {
+            .emotion{
+                height: 100px;
+            }
+            #myskill {
+                height: 1959px;
+            }
+            #skill {
+                display:contents; 
+
+            }
+            img {
+                height:350px;
+            }
+            #profile {
+                height: 650px;
+            }
+        }
+        
+        @media only screen and (max-width: 830px) {
+            body {
+                background-color: rgb(209, 164, 110);
+            }
+            
+            #profile{
+                padding-top:100px ;
+                display:contents;
+                height: auto;
+                width: auto;
+                
+                fill: rgb(28, 26, 26);
+                
+            }
+            
+            div {
+                padding-bottom: 0px;
+            }
+            .imgAnswer {
+                height:200px ;
+            }
+            #forya {
+                    height: 780px;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            #profile{
+                padding-top:100px ;
+                display:contents;
+                height: auto;
+                width: auto;
+                background-color:rgb(103, 53, 53);
+            }
+            .emotion{
+                height: 80px;
+            }
+            #skill {
+                display:contents;
+                
+            }
+            #myskill {
+                    height: 1650px;
+            }
+            img {
+                height:300px;
+            }
+            svg rect {
+            fill: rgb(255, 255, 255);
+            display: none;
+            }
+            @keyframes move {
+                0.0%{
+                }
+                24.1%{
+                    transform: translate(0px,20px);
+                }
+                49.6%{
+                    transform: translate(80px ,-15px);
+                }
+                78.4%{
+                    transform: translate(60px,30px);
+                }
+                95.4%{
+                    transform: translate(40px,1px);
+                }
+            }
+            #bottommm {
+
+                font-size: 5px;
+            }
+            svg text {
+            font-size: 16px;
+            }
+            #yo {
+                height: 190px;
+            }
+            #neamm {
+                    display: none;
+                }
+             body {
+                    background-color: rgb(140, 208, 208);
+            }
+            #forya {
+                    height: 750px;
+            }
+            @media only screen and (max-width: 360px) {
+                header {
+                    display: none;
+                }
+                body {
+                    background-color: rgb(140, 208, 208);
+                }
+                ul {
+                    display: none;
+                }
+                .emotion{
+                height: 65px;
+
+                }
+                #yo {
+                    height:200px ;
+                }
+                
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript" >
+            const video = document.querySelector("video");
+        if (window.matchMedia('(prefers-reduced-motion)').matches) {
+            video.removeAttribute("autoplay");
+            video.pause();
+        }
+        var i=0
+        function view() {
+            if (i ==0){
+            document.getElementById("like").innerHTML="ขอบคุณค่ะ!!!🙏"
+            i=1
+            }
+            else {
+                document.getElementById("like").innerHTML=""
+                i=0
+            }
+            document.g
+        }
+        var o=0
+        function py() {
+            let goPy = document.getElementById("pyt")
+            if (o==0){
+                goPy.innerHTML="Python"
+                goPy.style.color="#000000"
+                o=1
+            }
+            else {
+                goPy.innerHTML=""
+                o=0
+            }
+            
+        }
+        var cs=0
+        function css(){
+            let goCss =document.getElementById("cs")
+            if (cs==0){
+                goCss.innerHTML="CSS"
+                goCss.style.color="#000000"
+                cs=1
+            }
+            else {
+                goCss.innerHTML=""
+                cs=0
+            }
+        }
+        var m=0
+        function htm(){
+            let hiHtml=document.getElementById("htm")
+            if (m==0){
+                hiHtml.innerHTML="HTML"
+                hiHtml.style.color="#000000"
+                m=1
+            }
+            else {
+                hiHtml.innerHTML=""
+                m=0
+            }
+        }
+        var k=0
+        var y=0
+        function jssgo(){
+            let goJs = document.getElementById("js")
+            if (k==0){
+                goJs.innerHTML="JavaScript"
+                goJs.style.color="#000000"
+                k=1
+            }
+            else {
+                goJs.innerHTML=""
+                k=0
+            }
+        }
+        function emotion(num) {
+                let answer = document.querySelectorAll('.answer')
+                answer.forEach((answer) => {
+                    answer.style.display="none"
+                })
+                if (num != y) {
+                    answerr(num)
+                }
+                else {
+                    document.getElementById("noti").style.display="inline"
+                    y=0
+                }
+
+        }
+        function answerr(type) {
+            if (type == 1) {
+                document.getElementById("smile").style.display="inline"
+                y=1
+            }
+            if (type == 2) {
+                document.getElementById("cry").style.display="inline"
+                y=2
+            }
+            if (type == 3) {
+                document.getElementById("cool").style.display="inline"
+                y = 3
+            }
+            if (type == 4) {
+                document.getElementById("angry").style.display="inline"
+                y = 4
+            }
+            if (type == 5) {
+                document.getElementById("likeit").style.display="inline"
+                y = 5
+            }
+        }
+        function getSum() {
+            let num=["0","1","2","3","4","5","6","7","8","9"]
+            let sum = 0
+            let Getarray = document.querySelector("#getsum").value
+            for (let i in Getarray) { 
+                let r = Getarray[i]
+                for (let h = 0; h < r.length; h++) { 
+                    if (r[h] in num) {
+                        sum += Number(r[h])
+                        
+                    }
+                }
+                    
+            }
+            document.getElementById("numb").innerHTML="ค่าที่ได้คือ "+sum
+        }
+    </script>
+    <script src="./assets/vendor/preline/dist/hs-ui.bundle.js">
+    </script>
+    
+    <header>
+        <ul class="list-disc space-x-6">
+            <li class="inline-block"> <i></i></li>
+            <li class="inline-block"><a class="py-3 px-1 inline-flex items-center" href="#profile">
+            ข้อมูลส่วนตัว
+            </a></li>
+            <li class="inline-block"><a class="py-3 px-1 inline-flex items-center" href="#myskill" aria-current="page">
+            ความถนัด
+            </a></li>
+            
+            <li class="inline-block"><a class="py-3 px-1 inline-flex items-center " href="#forya">
+            เพิ่มเติม
+            </a></li>
+        </ul>
+    </header>
+    
+    <section id="neamm">
+        <video autoplay playsinline muted loop preload poster="https://i.pinimg.com/originals/87/f3/f1/87f3f1425b217691da645e97dbb50d55.gif" height="97%">
+            <source src="https://i.gifer.com/NvL.gif" />
+            <source src="https://s8.gifyu.com/images/nOIhcp_b46bc455c84c02561353da2c78d7b0f6_00-00-00_00-00-30_2.gif" />
+        </video>
+
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18 102 80" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <mask id="mask" x="0" y="0" width="100%" height="100%" >
+          <rect x="0" y="0" width="100%" height="120%" />
+        <text id="on" x="32"  y="52">AUN</text>
+        <text id="bottommm" x="26" y="65" >Aunthida Chaksan</text>
+        <text id="bottommm" x="47" y="72"  >⬇️</text>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" />
+        </svg>
+    </section>
+    
+    <article id="profile">
+        
+        <aside id="meg">
+            <div id="targetElement">
+            <img id="yo" src="https://sv1.picz.in.th/images/2022/06/17/V3ueQn.png" height="270"></div>
+            <br>
+
+        </aside>
+        <article id="ab">
+            <h1>ข้อมูลส่วนตัว</h1><br>
+            <h5>ชื่อ นางสาว อัญธิดา จักสาร </h5>
+            <h5>ชื่อเล่น อัญ   อายุ 16 ปี</h5>
+            <h5>เกิดวันที่ 16 กรกฏาคม 2005<br></h5>
+            <h5>ศึกษาอยู่ที่ โรงเรียนบ้านลาดวิทยา ระดับมัธยมศึกษาปีที่ 6</h5>
+            
+            <h5>คติประจำใจ :</h5>
+            <br>
+            <h3>ทุก ๆ ความสำเร็จ เริ่มมาจากการลงมือทำ!!!</h3>
+            <br><h4 id="like"> </h4>
+            <button id ="go" onclick="view()">กดถูกใจ</button>
+        </article>
+    </article>
+    <article id="myskill">
+        <h1>ทักษะสกิล!!!</h1>
+        <aside id="skill">
+            
+                <div id="py" >
+                    <a onclick="py()"><img height="300px"  src="https://sv1.picz.in.th/images/2022/06/18/V9AV68.png">
+                    </a>
+                    <h4 id="pyt"></h4>
+                </div>
+                <div id="csss">
+                    <a onclick="css()"><img height="300px" src="https://sv1.picz.in.th/images/2022/06/18/V9PRQq.png">
+                    </a><br>
+                    <h4 id="cs"></h4>
+                </div>
+                <div id="html">
+                    <a onclick="htm()"><img height="300px" src="https://sv1.picz.in.th/images/2022/06/18/V9Cddz.png"></a>
+                    <br><h4 id="htm"></h4>
+                </div>
+            
+            
+            <div id="jss">
+                <a onclick="jssgo()"><img height="300px" src="https://sv1.picz.in.th/images/2022/06/18/V9p951.png"></a>
+                <br><h4 id="js"></h4>
+            </div>
+            
+        </aside>
+        <p>ถ้าไม่รู้จักสัญลักษณ์ ลองกดที่รูปดูสิ</p>
+    </article>
+    
+    <article id="forya">
+        <h3>วันนี้เป็นยังไงบ้าง?</h3>
+        <p>รีวิวให้ฟังหน่อยสิ</p>
+        <aside id="emo">
+            <img onclick="emotion(1)" class="emotion"src="https://media.giphy.com/media/ehC4SqtNcEeLAiu66w/giphy.gif">
+            <img onclick="emotion(2)" class="emotion"src="https://media.giphy.com/media/ViHbdDMcIOeLeblrbq/giphy.gif">
+            <img onclick="emotion(3)" class="emotion" id="socool" src="https://media.giphy.com/media/LPkczVwUYcMbXsRCdP/giphy.gif">
+            <img onclick="emotion(4)" class="emotion"src="https://media.giphy.com/media/kyQfR7MlQQ9Gb8URKG/giphy.gif">
+            <img onclick="emotion(5)" class="emotion" src="https://media.giphy.com/media/ZdNlmHHr7czumQPvNE/giphy.gif">
+        </aside>
+        <article class="answer" id="noti">
+            <h5>สุดท้ายแล้วยังไงก็</h5>
+            <h6>✌️ขอให้โลกหมุนแต่สิ่งดี ๆ มาให้เจอนะคะ✌️</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/kmUvauX8TMWg0OsqKW/giphy-downsized-large.gif">
+        </article>
+        <article class="answer" id="smile">
+            <h5>💕 ขอให้มีรอยยิ้มแบบนี้ในทุก ๆ วันเลยนะคะ 💕 </h5>
+            <h6>คุณมีเสน่ห์มากที่สุดเลย ในเวลาที่มีรอยยิ้ม</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif" height="100">
+        </article>
+        <article class="answer" id="cry">
+            <h5>ไม่ว่าจะเกิดอะไรขึ้นเราเป็นกำลังใจให้เสมอนะคะ สู้ ๆ </h5>
+            <h6>💕ขอให้โลกนี้ใจดีกับคุณมากขึ้น ๆ ทุกวันเลยนะคะ💕</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/vAi1XUShhkPpx9bEP4/giphy.gif">
+        </article>
+        <article class="answer" id="cool">
+            <h5>ในยุคนี้ยังไงก็ ปลอดภัยไว้ก่อนนะคะ</h5>
+            <h6>✨แต่ใส่หน้ากากยังไงก็ปิดบังความน่ารักของทุกคนไม่ได้จริง ๆ✨</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/TF11M0XrowTQWfAgUB/giphy.gif">
+        </article>
+        <article class="answer" id="angry">
+            <h5>ขอให้ทุกอย่างสุดท้ายแล้วผ่านไปด้วยดีนะคะ</h5>
+            <h6>อย่าลืมยิ้มให้ตัวเองด้วยนะ👌</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/4tSHBpzJw7R3rrKUeo/giphy.gif">
+        </article>
+        <article class="answer" id="likeit">
+            <h5>หมายถึงชอบผลงานหนูแน่ ๆ เลยใช่ไหมคะ</h5>
+            <h6>💕รอเจอพี่ ๆ ทุกคนในค่ายนะคะ💕</h6>
+            <img class="imgAnswer" src="https://media.giphy.com/media/QBSPma5jP9ReSAdxKw/giphy.gif">
+        </article>
+    </article>
+
+    <footer>
+                <h5 id="numb">มาลองใช้ funtion Get Sum ที่เราทำในข้อ 4 กันดีกว่า</h5><br>
+                <input id="getsum" value='["h3llo" , "w0rld", "th1s", "is", "w3bt0pi4"]'>
+                <br><br>
+                <button onclick="getSum()">คลิ๊ก</button><br><br>
+                <p>**สามารถลองเปลี่ยนค่าได้นะ**</p>      
+    </footer>
+</body>
+</html>
